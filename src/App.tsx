@@ -1,5 +1,7 @@
 import React, {useEffect} from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import { Button, Text, View, StyleSheet, NativeModules } from 'react-native';
+
+const { PeoplesListModule } = NativeModules;
 
 // Components
 import Header from "./components/Header";
@@ -30,6 +32,10 @@ const App = () => {
   return (
     <View style={styles.root}>
       <Header />
+      <Button 
+        onPress={()=>PeoplesListModule.sayHi()}
+        title="Click Me"
+      />
     </View>
   );
 };
