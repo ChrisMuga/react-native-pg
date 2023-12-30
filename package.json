@@ -6,7 +6,7 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "lint": "eslint .",
-    "start": "react-native start",
+    "start": "export JAVA_HOME=$(dirname $(dirname $(update-alternatives --list javac))); react-native start",
     "test": "jest"
   },
   "dependencies": {
